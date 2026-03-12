@@ -1,0 +1,228 @@
+/* reference: https://neal.fun/not-a-robot/ */
+.mainwrapper{
+    width: 470px;
+    margin: auto;
+    margin-top: 9vh;
+    /* background-color: aliceblue; */
+    /* display: inline-block; */
+    border: 1px solid #d3d3d3;
+    box-shadow: 0 1px 3px 1px rgba(0, 0, 0, .06);
+    padding: 9px;
+}
+
+.title-blue {
+    background: #488ddd;
+    color: #fff;
+    font-size: 16px;
+    /* padding: 16px; */
+    font-family: "Roboto", sans-serif;
+    width: 99.5%;
+    height: 110px;
+    display: inline-block;
+    margin-left: 3px;
+}
+
+.title-text{
+    color: white;
+    padding-left: 4%;
+    padding-top: 6%;
+    margin-top: 2%;
+}
+
+.object-text {
+    color: white;
+    font-size: 30px;
+    line-height: 30px;
+    padding-left: 4%;
+    padding-top: 1%;
+}
+
+.note-text {
+    color: white;
+    font-size: 14px;
+    padding-top: 1%;
+    padding-left: 4%;
+}
+
+.container{
+    width: 100%;
+    display: inline-block;
+    margin-top: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    /* border-bottom: 1px solid #d3d3d3; */
+    padding-bottom: 12px;
+    margin-left: 3px;
+}
+
+.container p {
+    color: grey;
+    /* padding: 0px; */
+}
+
+.item{
+    width: 30%;
+    padding-left: 1%;
+    padding-right: 1%;
+    border-left: 0px;
+    border-bottom: 0px;
+    justify-content: space-between;
+    display: flex;
+    position: relative;
+    cursor: pointer; 
+    user-select: none;
+    transition: transform .12s ease, filter .12s ease;         
+}
+
+.item:hover{
+    transform: scale(1.02);
+    filter: brightness(1.05);
+}
+
+.title {
+    font-size: 1.125rem;
+    line-height: 1.2em;
+    -webkit-letter-spacing: 0.01em;
+    -moz-letter-spacing: 0.01em;
+    -ms-letter-spacing: 0.01em;
+    letter-spacing: 0.01em;
+    font-family: nyt-cheltenham, cheltenham-fallback-georgia, cheltenham-fallback-noto, georgia, 'times new roman', times, serif;
+    justify-content: center;
+    align-items: center;
+}
+
+.one {
+    background-color:rgba(165, 42, 42, 0.908);
+}
+
+.one p{
+    color: white;
+}
+
+.two {
+    background-color: rgba(137, 43, 226, 0.748);
+}
+
+.two p{
+    color: white;
+}
+
+.three {
+    background-color:black;
+}
+
+.three p{
+    color: white;
+}
+
+.four {
+    background-color:rgb(49, 145, 79);
+}
+
+.four p{
+    color: white;
+}
+
+.five {
+    background-color:rgb(12, 98, 122);
+}
+
+.five p{
+    color: white;
+}
+
+.six {
+    background-color:rgb(219, 112, 36);
+}
+
+.six p{
+    color: white;
+}
+
+.seven {
+    background-color:rgb(36, 60, 219);
+}
+
+.seven p{
+    color: white;
+}
+.eight {
+    background-color:rgb(134, 85, 84);
+}
+
+.eight p{
+    color: white;
+}
+.nine {
+    background-color:rgb(109, 65, 108);
+}
+
+.nine p{
+    color: white;
+}
+
+.item_scale {
+    outline-offset: -4px;
+    scale: .75;
+}
+
+.selected:after {
+    background-color: #488ddd;
+    background-image: url(images/captcha/checkmark-white.svg);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px 1px rgba(0, 0, 0, .1);
+    content: "";
+    height: 32px;
+    left: -14px;
+    position: absolute;
+    top: -14px;
+    width: 32px;
+}
+
+*::before, *::after {
+  box-sizing: border-box;
+}
+
+.control {
+    margin-left: 3px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 4px;
+    width: 99%;
+    margin-top: 0px;
+    border-top: 1px solid #d3d3d3;
+}
+
+.refresh {
+    padding-left: 8px;
+    width: 20px;
+    padding-top: 0px;
+}
+
+.verify_button {
+    background-color: #488ddd;
+    font-family: "Roboto", sans-serif;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 17px;
+    margin-left: auto;
+    margin-top: 3px;
+    margin-bottom: 0px;
+    padding: 10px 20px;
+    transition: background-color .15s ease-in-out;
+}
+
+.verify_button:hover{
+    filter: brightness(1.05);
+}
+
+a {
+    text-decoration: none;
+  }

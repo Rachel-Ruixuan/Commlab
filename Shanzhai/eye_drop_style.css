@@ -1,0 +1,12 @@
+.wrapper{
+    margin: auto;
+    width: 200px;
+    border-bottom: 3px double #000000ac;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.logo {
+    margin-top: 20px;
+}
+

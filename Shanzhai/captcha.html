@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="captcha_style.css">
+</head>
+<body>
+    <div class="mainwrapper">
+        <div class="title-blue">
+            <div class="title-text">Select all squares with a</div>
+            <div class="object-text"><b>News Title</b></div>
+        </div>
+        <div class="container">
+            <div class="item one">
+                <p class="title">New York’s Hottest Restaurant … Is in a Theater?</p>
+            </div>
+            <div class="item two">
+                <p class="title">Are Body Weight Exercises Just as Effective as Lifting?</p>
+            </div>
+            <div class="item three">
+                <p class="title">Is Therapy Really Working for You? Here’s How to Know.</p>
+            </div>
+            <div class="item four">
+                <p class="title">6 Unconventional Ways to Spark Sexual Desire</p>
+            </div>
+            <div class="item five">
+                <p class="title">11 Surprising Things You Can Put in Your Dishwasher</p>
+            </div>
+            <div class="item six">
+                <p class="title">How Healthy Are Potatoes?</p>
+            </div>
+            <div class="item seven">
+                <p class="title">The Iran War Is Trump’s War</p>
+            </div>
+            <div class="item eight">
+                <p class="title">How Healthy Is Citrus Fruit?</p>
+            </div>
+            <div class="item nine ">
+                <p class="title">Are Zendaya and Tom Holland Married?</p>
+            </div>
+        </div>
+        <div class="control">
+            <a href="captcha.html"><img src="images/captcha/refresh.svg" class="refresh"></a>
+            <a href="ad_index.html"><p class="verify_button">Verify</p></a>
+
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    // ai helped me here:
+  document.querySelectorAll(".item").forEach(item => {
+    item.addEventListener("click", () => {
+      item.classList.toggle("selected");
+      item.classList.toggle("item_scale");
+    });
+  });
+</script>
