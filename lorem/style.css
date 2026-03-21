@@ -1,0 +1,1287 @@
+.mainwrapper {
+    width: 908px;
+    height: 750px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.chapter {
+    width: 280px;
+    height: 250px;
+    display: inline-block;
+    outline: 1px dashed #000000;
+    vertical-align: top;
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 8px;
+}
+
+.chapter p {
+    margin: 10px;
+}
+
+#chapter5 {
+    margin-top: 70px;;
+    margin-left: 50px;
+    text-align: center;
+    font-size: 65px;
+    display: inline-block;
+}
+
+.chapter {
+    transition: all 2s linear;
+}
+
+.chapter:hover {
+    background-color: black;
+    color: white;
+}
+
+.two:hover {
+    font-size: 30px;
+    width: 400px;
+}
+
+.cursor {
+    font-size: 80px;
+    font-weight: lighter;
+    transform: translate(-5px, 6px);
+    display: inline-block;
+    animation: delete 4s infinite;
+}
+
+.five {
+    outline-offset: -10px;
+    outline: 10px solid black;
+}
+
+@keyframes blink {
+    from {transform: translate(-5px, 6px);
+          color: white;}
+    to {transform: translate(-5px, 6px);
+        color: black}
+}
+
+@keyframes delete {
+    0% {transform: translate(-5px, 6px);
+          color: white;}
+    10% {transform: translate(-5px, 6px);
+        color: black}
+    20% {transform: translate(-5px, 6px);
+          color: white;}
+    25% {transform: translate(-5px, 6px);
+        color: black}
+    30% {transform: translate(-56px, 6px)}
+    34% {transform: translate(-86px, 6px)}
+    38% {transform: translate(-108px, 6px)}
+    50% {transform: translate(-108px, 6px);
+          color: white;}
+    60% {transform: translate(-108px, 6px);
+        color: black}
+    70% {transform: translate(-108px, 6px);
+          color: white;}
+    80% {transform: translate(-108px, 6px);
+        color: black}
+    90% {transform: translate(-108px, 6px);
+          color: white;}
+    98% {transform: translate(-5px, 6px)}
+    100% {transform: translate(-5px, 6px);
+          color: white;}
+}
+
+.deleting:nth-child(5) {
+    animation: delete_m 4s infinite;
+}
+
+@keyframes delete_m {  
+    0% {transform: translate(0px, 0px)}
+    32% {transform: translate(0px, 0px);
+        color: black}
+    33% {transform: translate(0px, 0px);
+          color: white;}
+    99% {transform: translate(0px, 0px);
+          color: white;}
+    100% {transform: translate(0px, 0px);
+          color: black;}
+}
+
+.deleting:nth-child(4) {
+    animation: delete_e 4s infinite;
+}
+
+@keyframes delete_e {  
+    0% {transform: translate(0px, 0px)}
+    34% {transform: translate(0px, 0px);
+        color: black}
+    35% {transform: translate(0px, 0px);
+          color: white;}
+    99% {transform: translate(0px, 0px);
+          color: white;}
+    100% {transform: translate(0px, 0px);
+          color: black;}
+}
+
+.deleting:nth-child(3) {
+    animation: delete_r 4s infinite;
+}
+
+@keyframes delete_r {  
+    0% {transform: translate(0px, 0px)}
+    36% {transform: translate(0px, 0px);
+        color: black}
+    37% {transform: translate(0px, 0px);
+          color: white;}
+    99% {transform: translate(0px, 0px);
+          color: white;}
+    100% {transform: translate(0px, 0px);
+          color: black;}
+}
+
+
+/* #ground {
+    display: inline-block;
+    margin-top: 100px;
+    background-color: darkgrey;
+    width: 100%;
+    height: 100px;
+} */
+
+.spring {
+    display: inline-block;
+    transform: translate(0px, 70px);
+}
+
+.spring:nth-child(2) {
+    display: inline-block;
+    transform: translate(-2px, 60px);
+    animation: springing_lorem_o 2s cubic-bezier(0.729, 0, 0.277, 0.999) infinite alternate;
+}
+@keyframes springing_lorem_o {
+    from {transform: translate(-1px, 60px)}
+    to {transform: translate(-10px, 60px)}
+}
+
+.spring:nth-child(3) {
+    display: inline-block;
+    transform: translate(-2px, 50px);
+    animation: springing_lorem_r 2s cubic-bezier(0.729, 0, 0.277, 0.999) infinite alternate;
+}
+@keyframes springing_lorem_r {
+    from {transform: translate(0px, 50px)}
+    to {transform: translate(-16px, 50px)}
+}
+
+.spring:nth-child(4) {
+    display: inline-block;
+    transform: translate(0px, 40px);
+    animation: springing_e 2s cubic-bezier(0.729, 0, 0.277, 0.999) infinite alternate;
+}
+@keyframes springing_e {
+    from {transform: translate(2px, 40px)}
+    to {transform: translate(-20px, 40px)}
+}
+
+.spring:nth-child(5) {
+    display: inline-block;
+    transform: translate(0px, 50px);
+    animation: springing_lorem_m 2s cubic-bezier(0.729, 0, 0.277, 0.999) infinite alternate;
+}
+@keyframes springing_lorem_m {
+    from {transform: translate(3px, 50px)}
+    to {transform: translate(-24px, 50px)}
+}
+
+.spring:nth-child(6) {
+    display: inline-block;
+    transform: translate(1px, 60px);
+    animation: springing_ipsum_i 2s cubic-bezier(0.729, 0, 0.277, 0.999) infinite alternate;
+}
+@keyframes springing_ipsum_i {
+    from {transform: translate(4px, 60px)}
+    to {transform: translate(-30px, 60px)}
+}
+
+.spring:nth-child(7) {
+    display: inline-block;
+    animation: springing_p 2s cubic-bezier(0.729, 0, 0.277, 0.999) infinite alternate;
+}
+@keyframes springing_p {
+    from {transform: translate(4px, 72px)}
+    to {transform: translate(-34px, 72px)}
+}
+
+.spring:nth-child(8) {
+    display: inline-block;
+    transform: translate(-2px, 82px);
+    animation: springing_ipsum_s 2s cubic-bezier(0.729, 0, 0.277, 0.999) infinite alternate;
+}
+@keyframes springing_ipsum_s {
+    from {transform: translate(4px, 82px)}
+    to {transform: translate(-40px, 82px)}
+}
+
+.spring:nth-child(9) {
+    display: inline-block;
+    transform: translate(-2px, 92px);
+    animation: springing_u 2s cubic-bezier(0.729, 0, 0.277, 0.999) infinite alternate;
+}
+@keyframes springing_u {
+    from {transform: translate(5px, 92px)}
+    to {transform: translate(-45px, 92px)}
+}
+
+.spring:nth-child(10) {
+    display: inline-block;
+    transform: translate(-3px, 102px);
+    animation: springing_ipsum_m 2s cubic-bezier(0.729, 0, 0.277, 0.999) infinite alternate;
+}
+
+@keyframes springing_ipsum_m {
+    from {transform: translate(5px, 102px)}
+    to {transform: translate(-52px, 102px)}
+}
+
+.spring:nth-child(11) {
+    display: inline-block;
+    transform: translate(-3px, 94px);
+    animation: springing_d 2s cubic-bezier(0.729, 0, 0.277, 0.999) infinite alternate;
+}
+
+@keyframes springing_d {
+    from {transform: translate(6px, 94px)}
+    to {transform: translate(-60px, 94px)}
+}
+
+.spring:nth-child(12) {
+    display: inline-block;
+    transform: translate(-2px, 82px);
+    animation: springing_do_o 2s cubic-bezier(0.729, 0, 0.277, 0.999) infinite alternate;
+}
+
+@keyframes springing_do_o {
+    from {transform: translate(10px, 82px)}
+    to {transform: translate(-68px, 82px)}
+}
+
+.spring:nth-child(13) {
+    display: inline-block;
+    transform: translate(-1px, 72px);
+    animation: springing_l 2s cubic-bezier(0.729, 0, 0.277, 0.999) infinite alternate;
+}
+
+@keyframes springing_l {
+    from {transform: translate(10px, 72px)}
+    to {transform: translate(-73px, 72px)}
+}
+
+.spring:nth-child(14) {
+    display: inline-block;
+    transform: translate(0px, 60px);
+    animation: springing_lor_o 2s cubic-bezier(0.729, 0, 0.277, 0.999) infinite alternate;
+}
+
+@keyframes springing_lor_o {
+    from {transform: translate(12px, 60px)}
+    to {transform: translate(-76px, 60px)}
+}
+
+.spring:nth-child(15) {
+    display: inline-block;
+    transform: translate(-1px, 49px);
+    animation: springing_dolor_r 2s cubic-bezier(0.729, 0, 0.277, 0.999) infinite alternate;
+}
+
+@keyframes springing_dolor_r {
+    from {transform: translate(12px, 49px)}
+    to {transform: translate(-80px, 49px)}
+}
+
+
+.spring:nth-child(16) {
+    display: inline-block;
+    transform: translate(0px, 45px);
+    animation: springing_s 2s cubic-bezier(0.729, 0, 0.277, 0.999) infinite alternate;
+}
+
+@keyframes springing_s {
+    from {transform: translate(17px, 42px)}
+    to {transform: translate(-83px, 42px)}
+}
+
+.spring:nth-child(17) {
+    display: inline-block;
+    transform: translate(4px, 50px);
+    animation: springing_i 2s cubic-bezier(0.729, 0, 0.277, 0.999) infinite alternate;
+}
+
+@keyframes springing_i {
+    from {transform: translate(22px, 50px)}
+    to {transform: translate(-85px, 50px)}
+}
+
+.spring:nth-child(18) {
+    display: inline-block;
+    transform: translate(5px, 60px);
+    animation: springing_t 2s cubic-bezier(0.729, 0, 0.277, 0.999) infinite alternate;
+}
+
+@keyframes springing_t {
+    from {transform: translate(27px, 60px)}
+    to {transform: translate(-88px, 60px)}
+}
+
+.spring:nth-child(19) {
+    display: inline-block;
+    transform: translate(6px, 72px);
+    animation: springing_a 2s cubic-bezier(0.729, 0, 0.277, 0.999) infinite alternate;
+}
+
+@keyframes springing_a {
+    from {transform: translate(29px, 72px)}
+    to {transform: translate(-93px, 72px)}
+}
+
+.spring:nth-child(20) {
+    display: inline-block;
+    transform: translate(6px, 102px);
+    font-size: 120px;
+    animation: springing_am_m 2s cubic-bezier(0.729, 0, 0.277, 0.999) infinite alternate;
+}
+
+@keyframes springing_am_m {
+    from {transform: translate(26px, 102px)}
+    to {transform: translate(-95px, 102px)}
+}
+
+
+.pendulum {
+    display: inline-block;
+    padding-left: 25px;
+    padding-top: 50px;
+}
+
+.pendulum span:last-child {
+    display: inline-block;
+    font-size: 120px;
+    animation: swing_right 2.5s ease-in-out infinite alternate;
+}
+
+.pendulum span:first-child {
+    display: inline-block;
+    font-size: 120px;
+    animation: swing_left 2.5s ease-in-out infinite alternate;
+}
+
+.one:hover span:last-child {
+    display: inline-block;
+    font-size: 120px;
+    animation: swing_right 1.5s ease-in-out infinite alternate;
+}
+
+.one:hover span:first-child {
+    display: inline-block;
+    font-size: 120px;
+    animation: swing_left 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes swing_left {
+    0% {transform: rotate(45deg)}
+    25% {transform: rotate(0deg)}
+    55% {transform: rotate(0deg)}
+    60% {transform: rotate(0deg)}
+    100% {transform: rotate(45deg)}
+}
+
+@keyframes swing_right {
+    0% {transform: rotate(0deg)}
+    5% {transform: rotate(0deg)}
+    55% {transform: rotate(-45deg)}
+    75% {transform: rotate(0deg)}
+    100% {transform: rotate(0deg)}
+}
+
+.one span{ 
+    display: inline-block;
+    transition: background-color 2s ease-out;
+}
+
+.one:hover span:not(:first-child):not(:last-child) {
+    background-color: white;
+    /* border-radius: 20px; */
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+
+.one:hover span:nth-child(2){ 
+    display: inline-block;
+    animation: tremble1 .1s ease-in-out infinite alternate;
+}
+.one:hover span:nth-child(4){ 
+    display: inline-block;
+    animation: tremble1 .3s ease-in-out infinite alternate;
+}
+.one:hover span:nth-child(6){ 
+    display: inline-block;
+    animation: tremble1 .5s ease-in-out infinite alternate;
+}
+.one:hover span:nth-child(8){ 
+    display: inline-block;
+    animation: tremble1 .2s ease-in-out infinite alternate;
+}
+.one:hover span:nth-child(10){ 
+    display: inline-block;
+    animation: tremble1 .4s ease-in-out infinite alternate;
+}
+.one:hover span:nth-child(12){ 
+    display: inline-block;
+    animation: tremble1 .4s ease-in-out infinite alternate;
+}
+.one:hover span:nth-child(14){ 
+    display: inline-block;
+    animation: tremble1 .25s ease-in-out infinite alternate;
+}
+
+@keyframes tremble1 {
+    from {transform: translate(1px, 0px)}
+    to {transform: translate(-1px, 0px)}
+}
+
+.one:hover span:nth-child(3){ 
+    display: inline-block;
+    animation: tremble2 .2s ease-in-out infinite alternate;
+}
+.one:hover span:nth-child(5){ 
+    display: inline-block;
+    animation: tremble2 .2s ease-in-out infinite alternate;
+}
+.one:hover span:nth-child(7){ 
+    display: inline-block;
+    animation: tremble2 .2s ease-in-out infinite alternate;
+}
+.one:hover span:nth-child(9){ 
+    display: inline-block;
+    animation: tremble2 .2s ease-in-out infinite alternate;
+}
+.one:hover span:nth-child(11){ 
+    display: inline-block;
+    animation: tremble2 .2s ease-in-out infinite alternate;
+}
+.one:hover span:nth-child(13){ 
+    display: inline-block;
+    animation: tremble2 .2s ease-in-out infinite alternate;
+}
+.one:hover span:nth-child(15){ 
+    display: inline-block;
+    animation: tremble2 .2s ease-in-out infinite alternate;
+}
+@keyframes tremble2 {
+    from {transform: translate(.15px, 0px)}
+    to {transform: translate(-.5px, 0px)}
+}
+
+
+.present{
+    padding-top: 80px;
+    font-size: 20px;
+    padding-left: 30px;
+}
+
+.present span{
+    display: inline-block;
+    /* background-color: darkgrey; */
+}
+
+.present span:nth-child(1){
+    transform: translate(80px, 10px) scale(1.8);
+    animation: move_present1 2s ease-in infinite;
+}
+
+.present span:nth-child(2){
+    transform: translate(-65px, 20px) skew(18deg) scale(1);
+    animation: move_present2 2s ease-in infinite;
+}
+
+.present span:nth-child(3){
+    transform: translate(35px, 18px) skew(-18deg) scale(0.75);
+    animation: move_present3 2s ease-in infinite;
+}
+
+.four:hover span:nth-child(1){
+    transform: translate(80px, 10px) scale(1.8);
+    animation: move_present1 .25s ease-in infinite;
+}
+
+.four:hover span:nth-child(2){
+    transform: translate(-65px, 20px) skew(18deg) scale(1);
+    animation: move_present2 .25s ease-in infinite;
+}
+
+.four:hover span:nth-child(3){
+    transform: translate(35px, 18px) skew(-18deg) scale(0.75);
+    animation: move_present3 .25s ease-in infinite;
+}
+
+
+
+@keyframes move_present1 {
+    0% {transform: translate(80px, 10px) scale(1.8) skew(0deg)}
+    33.333% {transform: translate(0px, 20px) scale(1) skew(18deg)}
+    66.666% {transform: translate(155px, 18px) scale(0.75) skew(-18deg) }
+    100% { transform: translate(80px, 10px) scale(1.8) skew(0deg)}
+}
+
+@keyframes move_present2 {
+    0% {transform: translate(-65px, 20px) scale(1) skew(18deg)}
+    33.333% {transform: translate(105px, 18px) scale(0.75) skew(-18deg)}
+    66.666% {transform: translate(40px, 10px) scale(1.8) skew(0deg)}
+    100% {transform: translate(-65px, 20px) scale(1) skew(18deg)}
+}
+
+@keyframes move_present3 {
+    0% {transform: translate(35px, 18px) scale(0.75) skew(-18deg)}
+    33.333% {transform: translate(0px, 10px) scale(1.8) skew(0deg)}
+    66.666% {transform: translate(-115px, 20px) scale(1) skew(18deg)}
+    100% {transform: translate(35px, 18px) scale(0.75) skew(-18deg)}
+}
+
+.ferris {
+    /* padding-top: 95px;
+    padding-bottom: 95px;
+    padding-left: 35px; */
+    display: inline-block;
+    animation: ferris_spin 10s ease-in infinite;
+    width: 100%;
+    height: 100%;
+}
+
+.ferris span {
+    display: inline-block;
+    /* transform-origin: center center; */
+}
+
+.wrapper:nth-child(1) span:nth-child(1) {
+    transform: translate(130px, 57px) rotate(-60deg);
+}
+.wrapper:nth-child(1) span:nth-child(2) {
+    display: inline-block;
+    font-size: 50px;
+    transform: translate(101px, 40px);
+    animation: reverse_spin1 10s ease-in infinite;
+}
+.seven:hover .wrapper span:nth-child(2) {
+    border-left: 1px dashed white;
+    border-right: 1px dashed white;
+    border-bottom: 1px dashed white;
+}
+@keyframes reverse_spin1 {
+    from { transform: translate(101px, 40px) rotate(360deg); }
+    to   { transform: translate(101px, 40px) rotate(0deg); }
+}
+
+.wrapper:nth-child(2) span:nth-child(1) {
+    transform: translate(150px, 38px)
+}
+.wrapper:nth-child(2) span:nth-child(2) {
+    font-size: 50px;
+    transform: translate(142px, 53px);
+    animation: reverse_spin2 10s ease-in infinite;
+}
+@keyframes reverse_spin2 {
+    from { transform: translate(142px, 53px) rotate(360deg); }
+    to   { transform: translate(142px, 53px) rotate(0deg); }
+}
+
+.wrapper:nth-child(3) span:nth-child(1) {
+    transform: translate(135px, 20px) rotate(60deg)
+}
+.wrapper:nth-child(3) span:nth-child(2) {
+    font-size: 50px;
+    transform: translate(110px, 61px);
+    animation: reverse_spin3 10s ease-in infinite;
+}
+@keyframes reverse_spin3 {
+    from { transform: translate(110px, 61px) rotate(360deg); }
+    to   { transform: translate(110px, 61px) rotate(0deg); }
+}
+
+.wrapper:nth-child(4) span:nth-child(1) {
+    transform: translate(90px, -36px) rotate(120deg)
+}
+.wrapper:nth-child(4) span:nth-child(2) {
+    font-size: 50px;
+    transform: translate(30px, 5px);
+    animation: reverse_spin4 10s ease-in infinite;
+}
+@keyframes reverse_spin4 {
+    from { transform: translate(30px, 5px) rotate(360deg); }
+    to   { transform: translate(30px, 5px) rotate(0deg); }
+}
+
+
+.wrapper:nth-child(5) span:nth-child(1) {
+    transform: translate(60px, -130px) rotate(180deg)
+}
+.wrapper:nth-child(5) span:nth-child(2) {
+    font-size: 50px;
+    transform: translate(-20px, -117px);
+    animation: reverse_spin5 10s ease-in infinite;
+}
+@keyframes reverse_spin5 {
+    from { transform: translate(-20px, -117px) rotate(360deg); }
+    to   { transform: translate(-20px, -117px) rotate(0deg); }
+}
+
+
+.wrapper:nth-child(6) span:nth-child(1) {
+    transform: translate(82px, -228px) rotate(-120deg); 
+}
+.wrapper:nth-child(6) span:nth-child(2) {
+    font-size: 50px;
+    transform: translate(10px, -245px);
+    animation: reverse_spin6 10s ease-in infinite;
+}
+@keyframes reverse_spin6 {
+    from { transform: translate(7px, -245px) rotate(360deg); }
+    to   { transform: translate(7px, -245px) rotate(0deg); }
+}
+
+@keyframes ferris_spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+.qiao {
+    padding-top: 120px;
+}
+.qiao span{
+    display: inline-block;
+}
+
+.qiao span:nth-child(1) {
+    font-size: 40px;
+    transform: translate(15px, 15px);
+    animation: bounce_i 4s ease-in-out infinite;
+}
+
+.qiao span:nth-child(2) {
+    transform: translate(5px, 30px);
+    animation: up_down 4s ease-in-out infinite;
+}
+
+.qiao span:nth-child(3) {
+    font-size: 80px;
+    transform: translate(190px, -70px);
+    animation: bounce_s 4s ease-in-out infinite;
+}
+
+@keyframes up_down {
+    0%, 100% {transform: rotate(20deg)}
+    50% {transform: rotate(-20deg)}
+}
+
+@keyframes up_down_enhanced {
+    0%, 100% {transform: rotate(30deg)}
+    50% {transform: rotate(-30deg)}
+}
+
+@keyframes bounce_i {
+    0%, 100% {transform: translate(15px, -105px) scaleY(1.1)}
+    50% {transform: translate(15px, 30px) scale(0.8)}
+}
+
+@keyframes bounce_i_enhanced {
+    0%, 100% {transform: translate(22px, -175px) scaleY(1.1)}
+    50% {transform: translate(22px, 50px) scale(0.8)}
+}
+
+@keyframes bounce_s {
+    0%, 100% {transform: translate(190px, -45px) scaleY(0.5)}
+    50% {transform: translate(200px, -125px)}
+}
+
+@keyframes bounce_s_enhanced {
+    0%, 100% {transform: translate(190px, -35px) scaleY(0.5)}
+    50% {transform: translate(200px, -145px)}
+}
+
+.qiao span:nth-child(4) {
+    font-size: 80px;
+    transform: translate(60px, -40px);
+    color: white;
+}
+
+.three:hover .qiao span:nth-child(1) {
+    transform: translate(15px, 5px);
+    animation: bounce_i_enhanced 3s ease-in-out infinite;
+}
+
+.three:hover .qiao span:nth-child(2) {
+    transform: translate(5px, 30px);
+    animation: up_down_enhanced 3s ease-in-out infinite;
+}
+
+.three:hover .qiao span:nth-child(3) {
+    transform: translate(190px, -70px);
+    animation: bounce_s_enhanced 3s ease-in-out infinite;
+}
+
+
+.baiye span{
+    display: inline-block;
+}
+
+.baiye span:nth-child(odd){
+    transform: translate(5px, 0px) skew(-18deg) scaleY(2.8);
+    line-height: 2;
+}
+
+.baiye span:nth-child(even){
+    transform: translate(2px, 0px) skew(18deg) scaleY(1.1);
+    line-height: 1;
+}
+
+.baiye span:nth-child(1) {
+    animation: pull1 4s ease-in infinite alternate;
+}
+@keyframes pull1 {
+    75% {transform: translate(5px, 0px) skew(-18deg) scaleY(2.8)}
+    94% {transform: translate(5px, -10px) skew(-18deg) scaleY(1.1)}
+    100% {transform: translate(5px, -10px) skew(-18deg) scaleY(.8)}
+}
+
+.baiye span:nth-child(2) {
+    animation: pull2 4s ease-in infinite alternate;
+}
+@keyframes pull2 {
+    60% {transform: translate(2px, 0px) skew(18deg) scaleY(1.1)}
+    79% {transform: translate(2px, -5px) skew(18deg) scaleY(.8)}
+    88% {transform: translate(2px, -12px) skew(18deg) scaleY(.8)}
+    100% {transform: translate(2px, -30px) skew(18deg) scaleY(.8)}
+}
+
+.baiye span:nth-child(3) {
+    animation: pull3 4s ease-in infinite alternate;
+}
+@keyframes pull3 {
+    62% {transform: translate(5px, 0px) skew(-18deg) scaleY(2.8)}
+    73% {transform: translate(5px, -12px) skew(-18deg) scaleY(1.1)}
+    95% {transform: translate(5px, -35px) skew(-18deg) scaleY(.8)}
+    100% {transform: translate(5px, -50px) skew(-18deg) scaleY(.8)}
+}
+
+.baiye span:nth-child(4) {
+    animation: pull4 4s ease-in infinite alternate;
+}
+@keyframes pull4 {
+    41% {transform: translate(2px, 0px) skew(18deg) scaleY(1.1)}
+    56% {transform: translate(2px, -5px) skew(18deg) scaleY(.8)}
+    75% {transform: translate(2px, -30px) skew(18deg) scaleY(.8)}
+    100% {transform: translate(2px, -63px) skew(18deg) scaleY(.8)}
+}
+
+.baiye span:nth-child(5) {
+    animation: pull5 4s ease-in infinite alternate;
+}
+@keyframes pull5 {
+    40% {transform: translate(5px, 0px) skew(-18deg) scaleY(2.8)}
+    55% {transform: translate(5px, -7px) skew(-18deg) scaleY(1.1)}
+    75% {transform: translate(5px, -45px) skew(-18deg) scaleY(.8)}
+    100% {transform: translate(5px, -74px) skew(-18deg) scaleY(.8)}
+}
+
+.baiye span:nth-child(6) {
+    animation: pull6 4s ease-in infinite alternate;
+}
+@keyframes pull6 {
+    25% {transform: translate(2px, 0px) skew(18deg) scaleY(1.1)}
+    53% {transform: translate(2px, -13px) skew(18deg) scaleY(.8)}
+    75% {transform: translate(2px, -55px) skew(18deg) scaleY(.8)}
+    100% {transform: translate(2px, -88px) skew(18deg) scaleY(.8)}
+}
+
+.baiye span:nth-child(7) {
+    animation: pull7 4s ease-in infinite alternate;
+}
+@keyframes pull7 {
+    30% {transform: translate(5px, 0px) skew(-18deg) scaleY(2.8)}
+    50% {transform: translate(5px, -20px) skew(-18deg) scaleY(1.1)}
+    75% {transform: translate(5px, -70px) skew(-18deg) scaleY(.8)}
+    100% {transform: translate(5px, -110px) skew(-18deg) scaleY(.8)}
+}
+
+.baiye span:nth-child(8) {
+    animation: pull8 4s ease-in infinite alternate;
+}
+@keyframes pull8 {
+    25% {transform: translate(2px, 0px) skew(18deg) scaleY(1.1)}
+    35% {transform: translate(2px, -5px) skew(18deg) scaleY(.8)}
+    50% {transform: translate(2px, -35px) skew(18deg) scaleY(.8)}
+    75% {transform: translate(2px, -85px) skew(18deg) scaleY(.8)}
+    100% {transform: translate(2px, -125px) skew(18deg) scaleY(.8)}
+}
+
+.baiye span:nth-child(9) {
+    animation: pull9 4s ease-in infinite alternate;
+}
+@keyframes pull9 {
+    0% {transform: translate(5px, 0px) skew(-18deg) scaleY(2.8)}
+    25% {transform: translate(5px, -5px) skew(-18deg) scaleY(1.1)}
+    50% {transform: translate(5px, -55px) skew(-18deg) scaleY(.8)}
+    75% {transform: translate(5px, -105px) skew(-18deg) scaleY(.8)}
+    100% {transform: translate(5px, -145px) skew(-18deg) scaleY(.8)}
+}
+
+.baiye span:nth-child(10) {
+    color: white;
+    transform: translate(0px, 40px);
+}
+
+
+.eight:hover .baiye span:nth-child(10) {
+    color: white;
+    transform: translate(100px, -40px);
+    font-size: 60px;
+    animation: up 4s ease-in infinite alternate;
+}
+
+@keyframes up {
+    0% {transform: translate(220px, -185px)}
+    25% {transform: translate(220px, -145px)}
+    50% {transform: translate(220px, -95px)}
+    75% {transform: translate(220px, -45px)}
+    100% {transform: translate(220px, 0px)}
+}
+
+
+.piano span{
+    display: inline-block;
+}
+
+.piano span {
+    transform: translate(18px, 100px);
+    font-size: 32px;
+}
+
+.piano span {
+    transform: translate(18px, 100px);
+    font-size: 32px;
+    color: white;
+}
+.piano span:nth-child(1) {
+    animation: play1 4s ease-in infinite;
+}
+@keyframes play1 {
+    0% {color: white}
+    1% {color: black}
+    6% {color: white}
+    29% {color: white}
+    30% {color: black}
+    33% {color: white}
+    34% {color: black}
+    37% {color: white}
+}
+
+.piano span:nth-child(2) {
+    animation: play2 4s ease-in infinite;
+}
+@keyframes play2 {
+    1% {color: white}
+    2% {color: black}
+    7% {color: white}
+    49% {color: white}
+    50% {color: black}
+    53% {color: white}
+    54% {color: black}
+    57% {color: white}
+}
+
+.piano span:nth-child(3) {
+    animation: play3 4s ease-in infinite;
+}
+@keyframes play3 {
+    2% {color: white}
+    3% {color: black}
+    8% {color: white}
+    29% {color: white}
+    30% {color: black}
+    33% {color: white}
+    34% {color: black}
+    37% {color: white}
+}
+
+.piano span:nth-child(4) {
+    animation: play4 4s ease-in infinite;
+}
+@keyframes play4 {
+    3% {color: white}
+    4% {color: black}
+    9% {color: white}
+    49% {color: white}
+    50% {color: black}
+    53% {color: white}
+    54% {color: black}
+    57% {color: white}
+}
+
+.piano span:nth-child(5) {
+    animation: play5 4s ease-in infinite;
+}
+@keyframes play5 {
+    4% {color: white}
+    5% {color: black}
+    10% {color: white}
+    20% {color: white}
+}
+
+.piano span:nth-child(6) {
+    animation: play6 4s ease-in infinite;
+}
+@keyframes play6 {
+    5% {color: white}
+    6% {color: black}
+    11% {color: white}
+    69% {color: white}
+    70% {color: black}
+    73% {color: white}
+    74% {color: black}
+}
+
+.piano span:nth-child(7) {
+    animation: play7 4s ease-in infinite;
+}
+@keyframes play7 {
+    6% {color: white}
+    7% {color: black}
+    12% {color: white}
+    69% {color: white}
+    70% {color: black}
+    73% {color: white}
+    74% {color: black}
+}
+
+.piano span:nth-child(8) {
+    animation: play8 4s ease-in infinite;
+}
+@keyframes play8 {
+    7% {color: white}
+    8% {color: black}
+    13% {color: white}
+}
+
+.piano span:nth-child(9) {
+    animation: play9 4s ease-in infinite;
+}
+@keyframes play9 {
+    8% {color: white}
+    9% {color: black}
+    14% {color: white}
+    20% {color: white}
+    69% {color: white}
+    70% {color: black}
+    73% {color: white}
+    74% {color: black}
+}
+
+.piano span:nth-child(10) {
+    animation: play10 4s ease-in infinite;
+}
+@keyframes play10 {
+    9% {color: white}
+    10% {color: black}
+    15% {color: white}
+    82% {color: white}
+    83% {color: black}
+    88% {color: white}
+}
+
+.piano span:nth-child(11) {
+    animation: play11 4s ease-in infinite;
+}
+@keyframes play11 {
+    10% {color: white}
+    11% {color: black}
+    16% {color: white}
+    20% {color: white}
+    
+}
+
+
+.piano span:nth-child(12) {
+    animation: play12 4s ease-in infinite;
+}
+@keyframes play12 {
+    11% {color: white}
+    12% {color: black}
+    17% {color: white}
+    85% {color: white}
+    86% {color: black}
+    91% {color: white}
+}
+
+
+.piano span:nth-child(13) {
+    animation: play13 4s ease-in infinite;
+}
+@keyframes play13 {
+    12% {color: white}
+    13% {color: black}
+    18% {color: white}
+    79% {color: white}
+    80% {color: black}
+    85% {color: white}
+}
+
+
+.piano span:nth-child(14) {
+    animation: play14 4s ease-in infinite;
+}
+@keyframes play14 {
+    13% {color: white}
+    14% {color: black}
+    19% {color: white}
+}
+
+
+.piano span:nth-child(15) {
+    animation: play15 4s ease-in infinite;
+}
+@keyframes play15 {
+    14% {color: white}
+    15% {color: black}
+    20% {color: white}
+}
+
+.nine:hover .piano span {
+    outline: .8px solid white 
+}
+
+.vortex {
+    width: 260px;
+    height: 230px;
+    transform-origin: center, center;
+    animation: spin 10s linear infinite;
+}
+
+.six:hover .vortex {
+    animation: spin 15s linear infinite;
+}
+
+.vortex span {
+    display: inline-block;
+}
+
+.vortex span:nth-child(1) {
+    transform: translate(35px, 45px);
+    font-size: 50px;
+}
+
+.vortex span:nth-child(2) {
+    transform: translate(25px, 23px);
+    font-size: 49px;
+}
+
+.vortex span:nth-child(3) {
+    transform: translate(16px, 3px);
+    font-size: 48px;
+}
+
+.vortex span:nth-child(4) {
+    transform: translate(15px, -3px);
+    font-size: 47px;
+}
+
+.vortex span:nth-child(5) {
+    transform: translate(13px, -7px);
+    font-size: 46px;
+}
+
+.vortex span:nth-child(6) {
+    transform: translate(11px, -6px);
+    font-size: 45px;
+}
+.vortex span:nth-child(7) {
+    transform: translate(9px, -1px);
+    font-size: 44px;
+}
+.vortex span:nth-child(8) {
+    transform: translate(6px, 3px);
+    font-size: 43px;
+}
+.vortex span:nth-child(9) {
+    transform: translate(4px, 9px);
+    font-size: 42px;
+}
+.vortex span:nth-child(10) {
+    transform: translate(0px, 18px);
+    font-size: 41px;
+}
+.vortex span:nth-child(11) {
+    transform: translate(-6px, 30px);
+    font-size: 40px;
+}
+.vortex span:nth-child(12) {
+    transform: translate(-12px, 42px);
+    font-size: 39px;
+}
+.vortex span:nth-child(13) {
+    transform: translate(-20px, 58px);
+    font-size: 38px;
+}
+.vortex span:nth-child(14) {
+    transform: translate(223px, 23px);
+    font-size: 37px;
+}
+.vortex span:nth-child(15) {
+    transform: translate(208px, 40px);
+    font-size: 36px;
+}
+.vortex span:nth-child(16) {
+    transform: translate(193px, 53px);
+    font-size: 35px;
+}
+.vortex span:nth-child(17) {
+    transform: translate(173px, 75px);
+    font-size: 34px;
+}
+.vortex span:nth-child(18) {
+    transform: translate(153px, 90px);
+    font-size: 33px;
+}
+.vortex span:nth-child(19) {
+    transform: translate(135px, 98px);
+    font-size: 32px;
+}
+.vortex span:nth-child(20) {
+    transform: translate(110px, 110px);
+    font-size: 31px;
+}
+.vortex span:nth-child(21) {
+    transform: translate(90px, 115px);
+    font-size: 30px;
+}
+.vortex span:nth-child(22) {
+    transform: translate(70px, 119px);
+    font-size: 29px;
+}
+.vortex span:nth-child(23) {
+    transform: translate(50px, 120px);
+    font-size: 28px;
+}
+.vortex span:nth-child(24) {
+    transform: translate(30px, 119px);
+    font-size: 27px;
+}
+.vortex span:nth-child(25) {
+    transform: translate(10px, 119px);
+    font-size: 26px;
+}
+.vortex span:nth-child(26) {
+    transform: translate(-15px, 114px);
+    font-size: 25px;
+}
+.vortex span:nth-child(27) {
+    transform: translate(-37px, 112px);
+    font-size: 24px;
+}
+.vortex span:nth-child(28) {
+    transform: translate(-54px, 110px);
+    font-size: 23px;
+}
+.vortex span:nth-child(29) {
+    transform: translate(-67px, 106px);
+    font-size: 22px;
+}
+.vortex span:nth-child(30) {
+    transform: translate(-80px, 100px);
+    font-size: 21px;
+}
+.vortex span:nth-child(31) {
+    transform: translate(-96px, 90px);
+    font-size: 20px;
+}
+.vortex span:nth-child(32) {
+    transform: translate(-109px, 80px);
+    font-size: 19px;
+}
+.vortex span:nth-child(33) {
+    transform: translate(-116px, 70px);
+    font-size: 18px;
+}
+.vortex span:nth-child(34) {
+    transform: translate(-116px, 60px);
+    font-size: 17px;
+}
+.vortex span:nth-child(35) {
+    transform: translate(-115px, 50px);
+    font-size: 16px;
+}
+.vortex span:nth-child(36) {
+    transform: translate(-113px, 45px);
+    font-size: 15px;
+}
+.vortex span:nth-child(37) {
+    transform: translate(-111px, 43px);
+    font-size: 14px;
+}
+.vortex span:nth-child(38) {
+    transform: translate(-109px, 40px);
+    font-size: 13px;
+}
+.vortex span:nth-child(39) {
+    transform: translate(-106px, 41px);
+    font-size: 12px;
+}
+.vortex span:nth-child(40) {
+    transform: translate(-104px, 44px);
+    font-size: 12px;
+}
+.vortex span:nth-child(41) {
+    transform: translate(152px, 25px);
+    font-size: 11px;
+}
+.vortex span:nth-child(42) {
+    transform: translate(152px, 32px);
+    font-size: 10px;
+}
+.vortex span:nth-child(43) {
+    transform: translate(150px, 38px);
+    font-size: 9px;
+}
+.vortex span:nth-child(44) {
+    transform: translate(146px, 44px);
+    font-size: 8px;
+}
+.vortex span:nth-child(45) {
+    transform: translate(142px, 48px);
+    font-size: 7px;
+}
+.vortex span:nth-child(46) {
+    transform: translate(138px, 52px);
+    font-size: 6px;
+}
+.vortex span:nth-child(47) {
+    transform: translate(134px, 56px);
+    font-size: 5px;
+}
+.vortex span:nth-child(48) {
+    transform: translate(130px, 60px);
+    font-size: 4px;
+}
+.vortex span:nth-child(49) {
+    transform: translate(126px, 60px);
+    font-size: 3px;
+}
+.vortex span:nth-child(50) {
+    transform: translate(124px, 60px);
+    font-size: 2px;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+.six:hover .vortex span{
+    background-color: white;
+}
+
