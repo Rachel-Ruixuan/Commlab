@@ -19,3 +19,7 @@ The live link to this page is:
 - [Shanzhai](Shanzhai)
 
 <img src="docs/Shanzhai/NYT.png" alt="shanzhai demo" width="370">
+
+- [Lorem ipsum](lorem)
+
+<img src="docs/lorem/motion.png" alt="lorem demo" width="370">

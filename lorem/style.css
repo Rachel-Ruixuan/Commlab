@@ -506,17 +506,17 @@
     animation: move_present3 2s ease-in infinite;
 }
 
-.four:hover span:nth-child(1){
+.seven:hover span:nth-child(1){
     transform: translate(80px, 10px) scale(1.8);
     animation: move_present1 .25s ease-in infinite;
 }
 
-.four:hover span:nth-child(2){
+.seven:hover span:nth-child(2){
     transform: translate(-65px, 20px) skew(18deg) scale(1);
     animation: move_present2 .25s ease-in infinite;
 }
 
-.four:hover span:nth-child(3){
+.seven:hover span:nth-child(3){
     transform: translate(35px, 18px) skew(-18deg) scale(0.75);
     animation: move_present3 .25s ease-in infinite;
 }
@@ -568,7 +568,7 @@
     transform: translate(101px, 40px);
     animation: reverse_spin1 10s ease-in infinite;
 }
-.seven:hover .wrapper span:nth-child(2) {
+.four:hover .wrapper span:nth-child(2) {
     border-left: 1px dashed white;
     border-right: 1px dashed white;
     border-bottom: 1px dashed white;
