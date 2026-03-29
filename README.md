@@ -23,3 +23,7 @@ The live link to this page is:
 - [Lorem ipsum](lorem)
 
 <img src="docs/lorem/motion.png" alt="lorem demo" width="370">
+
+- [DOM entropy](entropy)
+
+<img src="docs/entropy/Mimi.png" alt="entropy demo" width="370">

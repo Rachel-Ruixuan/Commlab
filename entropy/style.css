@@ -1,0 +1,176 @@
+.mainwrapper {
+    position: relative;
+    margin: auto;
+    background-color: black;
+    /* background-color: rgba(90, 128, 162, 0.259); */
+    width: 1200px;
+    height: 500px;
+    margin-top: 100px;
+}
+
+.scene {
+    width: 1200px;
+    /* height: 220px; */
+    padding-top: 240px;
+    padding-left: 50px;
+    font-size: 40px;    
+}
+
+#control_btn {
+    position: relative;
+    z-index: 4;
+}
+
+.question {
+    position: relative;
+    margin-top: 10px;
+    margin-left: 1240px;
+    z-index: 4;
+}
+
+.score_layer {
+    position: absolute;
+    inset: 0;
+}
+
+.grey_layer {
+    z-index: 1;
+    color: lightgrey;
+}
+
+.white_layer {
+    z-index: 2;
+    color: white;
+}
+
+.position {
+    margin-right: 20px;
+    padding: 10px 20px 5px;
+    background-color: white;
+    display: inline-block;
+    z-index: 3;
+}
+
+.stage_one {
+    border-radius: 10px;
+    transition: all 1s ease-in-out;
+    transform: translateY(0);
+    box-shadow: 0 0 50px rgba(255,255,255,0.8);
+    animation: floating 2s ease-in-out infinite alternate;
+}
+
+@keyframes floating {
+    from {transform: translate(0px, 0px)}
+    to {transform: translate(0px, -15px)}
+}
+
+
+.stage_one:nth-child(1) { animation-delay: 0s; }
+.stage_one:nth-child(2) { animation-delay: 0.3s; }
+.stage_one:nth-child(3) { animation-delay: 0.7s; }
+.stage_one:nth-child(4) { animation-delay: 0.2s; }
+.stage_one:nth-child(5) { animation-delay: 1s; }
+.stage_one:nth-child(6) { animation-delay: 0.5s; }
+.stage_one:nth-child(7) { animation-delay: 1.2s; }
+.stage_one:nth-child(8) { animation-delay: 0.8s; }
+.stage_one:nth-child(9) { animation-delay: 1.5s; }
+
+
+
+.score_container {
+    position: absolute;
+    width: 97.5%;
+    /* height: 10px; */
+    margin-top: 90px;
+    margin-left: 2.5%;
+    display: inline-block;
+}
+
+.score {
+    margin-left: 10px;
+    padding: 10px 8px 5px;
+    color: white;
+    font-size: 40px;
+    opacity: 0;
+    animation: fade_in 3s forwards, floating 2s ease-in-out infinite alternate;
+    display: inline-block;
+}
+
+@keyframes fade_in {
+    to { opacity: 0.8; }
+}
+
+.score:nth-child(1) { animation-delay: 0s; }
+.score:nth-child(2) { animation-delay: 0.3s; }
+.score:nth-child(3) { animation-delay: 0.7s; }
+.score:nth-child(4) { animation-delay: 0.2s; }
+.score:nth-child(5) { animation-delay: 1s; }
+.score:nth-child(6) { animation-delay: 0.5s; }
+.score:nth-child(7) { animation-delay: 1.2s; }
+.score:nth-child(8) { animation-delay: 0.8s; }
+.score:nth-child(9) { animation-delay: 1.5s; }
+
+
+.stage_two {
+    border-radius: 50px;
+    transition: all 2s ease-in-out;
+    transform: translateY(0);
+    box-shadow: 0 0 80px rgba(255,255,255,0.8);
+    animation: drifting 2s ease-in-out infinite alternate;
+}
+
+
+@keyframes drifting {
+    0%   { transform: translate(0px, 0px); }
+    50%  { transform: translate(13px, -10px); }
+    100% { transform: translate(-13px, 15px); }
+}
+
+.stage_two:nth-child(1) { animation-delay: 0s; }
+.stage_two:nth-child(2) { animation-delay: 0.3s; }
+.stage_two:nth-child(3) { animation-delay: 0.7s; }
+.stage_two:nth-child(4) { animation-delay: 0.2s; }
+.stage_two:nth-child(5) { animation-delay: 1s; }
+.stage_two:nth-child(6) { animation-delay: 0.5s; }
+.stage_two:nth-child(7) { animation-delay: 1.2s; }
+
+.stage_two_animation {
+    animation: drifting 2s ease-in-out infinite alternate;
+}
+
+
+.stage_three {
+    border-radius: 200px;
+    transition: all 2s ease-in-out;
+    transform: translateY(0);
+    box-shadow: 0 0 200px rgba(255,255,255,0.95);
+    animation: drifting .8s ease-in-out infinite alternate, blinking 1s ease-in-out infinite;
+}
+
+@keyframes blinking {
+    from {box-shadow: 0 0 200px rgba(255,255,255,0.95); opacity: 100%;}
+    to {box-shadow: 0 0 100px rgba(255,255,255,0.95); opacity: 50%;}
+}
+
+.stage_four {
+    border-radius: 200px;
+    transition: all 2s ease-in-out;
+    transform: translateY(0);
+    box-shadow: 0 0 200px rgba(255,255,255,0.95);
+    animation: airing 8s ease-in-out infinite alternate, blinking 8s ease-in-out infinite;
+}
+
+
+@keyframes airing {
+    0%   { transform: translate(0px, 0px); }
+    25%  { transform: translate(-10px, 30px); }
+    50%  { transform: translate(-20px, -10px); }
+    100% { transform: translate(0px, 15px); }
+}
+
+
+.chaos {
+    position: absolute;
+    display: inline-block;
+    opacity: 0.3;
+}
