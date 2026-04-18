@@ -27,3 +27,7 @@ The live link to this page is:
 - [DOM entropy](entropy)
 
 <img src="docs/entropy/Mimi.png" alt="entropy demo" width="370">
+
+- [Clock](clock)
+
+<img src="docs/clock/demo.png" alt="clock demo" width="370">

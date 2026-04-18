@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.clock {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgb(37, 37, 37);
+    border-radius: 20px;
+    border: 30px solid rgb(37, 37, 37);
+    animation: bounce 4s ease-in-out infinite alternate;
+    animation-play-state: paused;
+    transform: translateX(0px);
+}
+
+.clock.start {
+    animation-play-state: running;
+}
+
+.clock:hover {
+    cursor: pointer;
+}
+
+@keyframes bounce {
+    0% {transform: translateX(-20px);}
+    25% {transform: translateX(-24px);}
+    30% {transform: translateX(-25px);}
+    35% {transform: translateX(-15px);}
+    40% {transform: translateX(5px);}
+    45% {transform: translateX(20px);}
+    100% {transform: translateX(20px);}
+}
+
+.reel {
+    width: 60px;
+    height: 80px;
+    overflow: hidden;
+    border: 1px solid white;
+    border-radius: 8px;
+    background: #111;
+    position: relative;
+}
+
+.strip {
+    display: flex;
+    flex-direction: row;
+    transition: transform 0.5s;
+}
+
+.digit {
+    width: 60px;
+    height: 80px;
+    flex-shrink: 0;
+    color: white;
+    font-size: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: blink 3s ease-in-out infinite;
+    animation-play-state: paused;
+}
+
+.digit.start {
+    animation-play-state: running;
+}
+
+.colon {
+    color: white;
+    font-size: 48px;
+}
+
+@keyframes blink {
+    0% {filter: blur(0px);}
+    25% {filter: blur(8px);}
+    30% {filter: blur(15px); transform: scaleX(1.8);}
+    35% {filter: blur(7px);}
+    40% {filter: blur(16px); transform: scaleX(2.8);}
+    45% {filter: blur(20px); transform: scaleX(3.8);}
+}
