@@ -1,0 +1,251 @@
+body {
+    background-color: white;
+    animation: fainting 4s ease-in-out 1;
+    transition: all 8s ease-in-out;
+}
+
+.sun {
+    margin-top: -300px;
+    margin-left: 30px;
+    /* animation: shine 2s ease-in-out infinite alternate; */
+    font-size: 800px;
+    position: fixed;
+    /* transform: scale(25.2); */
+    /* filter: blur(1px); */
+}
+
+@keyframes  shine {
+    0% {color: white; transform: scale(0.4) }
+    5% {color: white; transform: scale(0.3) }
+    20% {color: white; transform: scale(21.2) }
+    22% {color: white; transform: scale(22.2) }
+    25% {transform: scale(23.2) }
+    29% {transform: scale(24.2) }
+    32% {transform: scale(24.2) }
+    80% {transform: scale(25.2) }
+}
+
+@keyframes  fainting {
+    0% {background-color: white}
+    60% {background-color: white}
+    65% {background-color: black}
+    69% {background-color: white}
+    73% {background-color: black}
+    80% {background-color: white}
+}
+
+.tree_container {
+    margin-top: 35%;
+    margin-left: 1400px;
+    /* background-color: aquamarine; */
+    width: 1000px;
+    display: inline-block;
+    position: fixed;
+}
+.plant {
+    display: inline-block;
+    vertical-align: top;
+    color: white;
+    filter: blur(5px);
+    transition: all .5s ease-in-out;
+}
+.plant:hover{
+    color: black;
+    filter: blur(0px);
+}
+.plant_clearer {
+    display: inline-block;
+    vertical-align: top;
+    color: white;
+    filter: blur(1.5px);
+    transition: all .1s ease-in-out;
+}
+.plant_clearer:hover{
+    color: black;
+    filter: blur(0px);
+}
+
+#plant1{
+    margin-top: 50px;
+}
+#plant2{
+    margin-top: 10px;
+    transform: scale(1.77);
+}
+#plant3{
+    margin-left: 50px;
+    margin-top: 50px;
+    transform: scale(0.9);
+}
+#plant4{
+    margin-left: -40px;
+    margin-top: 30px;
+}
+#plant5{
+    margin-left: -30px;
+    margin-top: 42px;
+    transform: scale(0.8);
+}
+#plant6{
+    margin-left: -30px;
+    margin-top: 42px;
+    transform: scale(0.8) rotate(-18deg);
+}
+#plant7{
+    margin-left: 0px;
+    margin-top: 12px;
+    transform: scale(1.8);
+}
+#plant8{
+    margin-left: -30px;
+    margin-top: 42px;
+    transform: scale(0.8);
+}
+#plant9{
+    margin-left: -30px;
+    margin-top: 52px;
+    transform: scale(0.8) rotate(18deg);
+}
+#plant10{
+    margin-left: 30px;
+    margin-top: 32px;
+    transform: scale(1.2);
+}
+#plant11{
+    margin-left: -30px;
+    margin-top: 42px;
+    transform: scale(1.1) rotate(10deg);
+}
+#plant12{
+    margin-left: -35px;
+    margin-top: 52px;
+    transform: scale(0.8);
+}
+#plant13{
+    margin-left: -25px;
+    margin-top: 32px;
+    transform: scale(1.2);
+}
+
+.tree1 span:nth-child(1) {
+    font-size: 30px;
+}
+.tree1 span:nth-child(2) {
+    font-size: 100px;
+    left: -5px;
+    top: 20px;
+    position: relative;
+}
+.tree1 span:nth-child(3) {
+    font-size: 30px;
+    left: -20px;
+    top: 5px;
+    position: relative;
+}
+.tree1 span:nth-child(4) {
+    font-size: 30px;
+    left: -20px;
+    position: relative;
+    /* translate: rotate(20deg); */
+}
+
+
+.tree2 span:nth-child(1) {
+    font-size: 120px;
+}
+.tree2 span:nth-child(2) {
+    font-size: 40px;
+    left: -10px;
+    top: -35px;
+    position: relative;
+
+}
+.tree2 span:nth-child(3) {
+    font-size: 30px;
+    left: -55px;
+    top: -30px;
+    position: relative;
+}
+.tree2 span:nth-child(4) {
+    font-size: 20px;
+    left: -75px;
+    top: -40px;
+    position: relative;
+}
+.berry {
+    position: absolute;
+    left: 20px;
+    top: 70px;
+}
+.berry span:nth-child(1) {
+    position: relative;
+    left: 1px;
+    top: -2px;
+}
+.berry span:nth-child(3) {
+    position: relative;
+    top: -2px;
+}
+.berry span:nth-child(5) {
+    position: relative;
+    top: -2px;
+}
+.berry:hover {
+    cursor: pointer;
+}
+
+.interactionBox {
+    position: relative;
+    left: 45px;
+    top: -48px;
+    font-size: 10px;
+    width: 50px;
+    height: 20px;
+    display: none;
+    z-index: 999;
+}
+
+#plant13:hover .interactionBox {
+  display: block;
+}
+#plant14:hover .interactionBox {
+  display: block;
+}
+
+.blank {
+    height: 8000px;
+    display: inline-block;
+    background-color: antiquewhite;
+}
+
+
+.river_container {
+    width: 1800px;
+    /* height: 200px; */
+    margin-top: 550px;
+    /* background-color: aliceblue; */
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 2000px;
+    position: fixed;
+}
+
+.river {
+    color: white;
+    padding: 100px;
+    position: relative
+}
+
+.river span {
+    font-size: 100px;
+}
+.river span:nth-child(odd) {
+    position: relative;
+    top: -80px;
+    margin-left: 100px;
+}
+.river span:nth-child(even) {
+    position: relative;
+    top: -20px;
+    margin-left: 50px;
+}
