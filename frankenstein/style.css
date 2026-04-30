@@ -1,7 +1,10 @@
 body {
     background-color: white;
+    transition: all 8s linear;
+}
+
+.intro_page {
     animation: fainting 4s ease-in-out 1;
-    transition: all 8s ease-in-out;
 }
 
 .sun {
@@ -14,24 +17,68 @@ body {
     /* filter: blur(1px); */
 }
 
-@keyframes  shine {
-    0% {color: white; transform: scale(0.4) }
-    5% {color: white; transform: scale(0.3) }
-    20% {color: white; transform: scale(21.2) }
-    22% {color: white; transform: scale(22.2) }
-    25% {transform: scale(23.2) }
-    29% {transform: scale(24.2) }
-    32% {transform: scale(24.2) }
-    80% {transform: scale(25.2) }
+@keyframes shine {
+    0% {
+        color: white;
+        transform: scale(0.4)
+    }
+
+    5% {
+        color: white;
+        transform: scale(0.3)
+    }
+
+    20% {
+        color: white;
+        transform: scale(21.2)
+    }
+
+    22% {
+        color: white;
+        transform: scale(22.2)
+    }
+
+    25% {
+        transform: scale(23.2)
+    }
+
+    29% {
+        transform: scale(24.2)
+    }
+
+    32% {
+        transform: scale(24.2)
+    }
+
+    80% {
+        transform: scale(25.2)
+    }
 }
 
-@keyframes  fainting {
-    0% {background-color: white}
-    60% {background-color: white}
-    65% {background-color: black}
-    69% {background-color: white}
-    73% {background-color: black}
-    80% {background-color: white}
+@keyframes fainting {
+    0% {
+        background-color: white
+    }
+
+    60% {
+        background-color: white
+    }
+
+    65% {
+        background-color: black
+    }
+
+    69% {
+        background-color: white
+    }
+
+    73% {
+        background-color: black
+    }
+
+    80% {
+        background-color: white
+    }
 }
 
 .tree_container {
@@ -42,6 +89,7 @@ body {
     display: inline-block;
     position: fixed;
 }
+
 .plant {
     display: inline-block;
     vertical-align: top;
@@ -49,10 +97,12 @@ body {
     filter: blur(5px);
     transition: all .5s ease-in-out;
 }
-.plant:hover{
+
+.plant:hover {
     color: black;
     filter: blur(0px);
 }
+
 .plant_clearer {
     display: inline-block;
     vertical-align: top;
@@ -60,68 +110,81 @@ body {
     filter: blur(1.5px);
     transition: all .1s ease-in-out;
 }
-.plant_clearer:hover{
+
+.plant_clearer:hover {
     color: black;
     filter: blur(0px);
 }
 
-#plant1{
+#plant1 {
     margin-top: 50px;
 }
-#plant2{
+
+#plant2 {
     margin-top: 10px;
     transform: scale(1.77);
 }
-#plant3{
+
+#plant3 {
     margin-left: 50px;
     margin-top: 50px;
     transform: scale(0.9);
 }
-#plant4{
+
+#plant4 {
     margin-left: -40px;
     margin-top: 30px;
 }
-#plant5{
+
+#plant5 {
     margin-left: -30px;
     margin-top: 42px;
     transform: scale(0.8);
 }
-#plant6{
+
+#plant6 {
     margin-left: -30px;
     margin-top: 42px;
     transform: scale(0.8) rotate(-18deg);
 }
-#plant7{
+
+#plant7 {
     margin-left: 0px;
     margin-top: 12px;
     transform: scale(1.8);
 }
-#plant8{
+
+#plant8 {
     margin-left: -30px;
     margin-top: 42px;
     transform: scale(0.8);
 }
-#plant9{
+
+#plant9 {
     margin-left: -30px;
     margin-top: 52px;
     transform: scale(0.8) rotate(18deg);
 }
-#plant10{
+
+#plant10 {
     margin-left: 30px;
     margin-top: 32px;
     transform: scale(1.2);
 }
-#plant11{
+
+#plant11 {
     margin-left: -30px;
     margin-top: 42px;
     transform: scale(1.1) rotate(10deg);
 }
-#plant12{
+
+#plant12 {
     margin-left: -35px;
     margin-top: 52px;
     transform: scale(0.8);
 }
-#plant13{
+
+#plant13 {
     margin-left: -25px;
     margin-top: 32px;
     transform: scale(1.2);
@@ -130,18 +193,21 @@ body {
 .tree1 span:nth-child(1) {
     font-size: 30px;
 }
+
 .tree1 span:nth-child(2) {
     font-size: 100px;
     left: -5px;
     top: 20px;
     position: relative;
 }
+
 .tree1 span:nth-child(3) {
     font-size: 30px;
     left: -20px;
     top: 5px;
     position: relative;
 }
+
 .tree1 span:nth-child(4) {
     font-size: 30px;
     left: -20px;
@@ -153,6 +219,7 @@ body {
 .tree2 span:nth-child(1) {
     font-size: 120px;
 }
+
 .tree2 span:nth-child(2) {
     font-size: 40px;
     left: -10px;
@@ -160,38 +227,56 @@ body {
     position: relative;
 
 }
+
 .tree2 span:nth-child(3) {
     font-size: 30px;
     left: -55px;
     top: -30px;
     position: relative;
 }
+
 .tree2 span:nth-child(4) {
     font-size: 20px;
     left: -75px;
     top: -40px;
     position: relative;
 }
+
 .berry {
     position: absolute;
     left: 20px;
     top: 70px;
+    animation: blink 1s ease-in-out infinite;
 }
+
 .berry span:nth-child(1) {
     position: relative;
     left: 1px;
     top: -2px;
 }
+
 .berry span:nth-child(3) {
     position: relative;
     top: -2px;
 }
+
 .berry span:nth-child(5) {
     position: relative;
     top: -2px;
 }
+
 .berry:hover {
     cursor: pointer;
+}
+
+@keyframes blink {
+    from {
+        opacity: 100%
+    }
+
+    to {
+        opacity: 0%
+    }
 }
 
 .interactionBox {
@@ -206,10 +291,7 @@ body {
 }
 
 #plant13:hover .interactionBox {
-  display: block;
-}
-#plant14:hover .interactionBox {
-  display: block;
+    display: block;
 }
 
 .blank {
@@ -233,19 +315,594 @@ body {
 .river {
     color: white;
     padding: 100px;
-    position: relative
+    position: relative;
+    margin-left: 300px;
 }
 
 .river span {
     font-size: 100px;
-}
-.river span:nth-child(odd) {
     position: relative;
+    transition: top .1s linear;
+}
+
+.river span:nth-child(odd) {
     top: -80px;
     margin-left: 100px;
 }
+
 .river span:nth-child(even) {
+    top: -40px;
+    margin-left: 100px;
+}
+
+.drink {
+    color: white;
+    position: fixed;
+    font-size: 20px;
+    left: 1080px;
+    top: 615px;
+    animation: blink 1s ease-in-out infinite;
+}
+
+.drink span:nth-child(1) {
     position: relative;
-    top: -20px;
-    margin-left: 50px;
+    left: -35px;
+}
+
+.water {
+    color: white;
+    position: fixed;
+    font-size: 20px;
+    left: 1015px;
+    top: 645px;
+    animation: blink 1s ease-in-out infinite;
+}
+
+.drink_water:hover {
+    cursor: pointer;
+}
+
+.interactionBox2 {
+    color: white;
+    position: fixed;
+    left: 1090px;
+    top: 635px;
+    width: 80px;
+    height: 80px;
+    font-size: 12px;
+    display: block;
+    z-index: 999;
+    /* background-color: aqua; */
+}
+
+.interactionBox2:hover {
+    cursor: pointer;
+}
+
+.interactionBox3 {
+    color: white;
+    position: fixed;
+    left: 1110px;
+    top: 645px;
+    width: 50px;
+    font-size: 12px;
+    display: block;
+    z-index: 999;
+    padding: 2px 1px;
+    border: 1px solid white;
+}
+
+.interactionBox3:hover {
+    cursor: pointer;
+}
+
+
+.fire {
+    margin-left: 30%;
+    margin-top: 8000px;
+    /* transition: all 3s ease-in-out; */
+    animation: creation 3s ease-in-out;
+}
+
+@keyframes creation {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+.message_board {
+    /* background-color: aqua; */
+    width: 200px;
+    height: 200px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    overflow: hidden;
+}
+
+.theme_image {
+    margin-left: 32%;
+    margin-top: 8000px;
+    margin-bottom: 30px;
+    width: 520px;
+    animation: creation 4s ease-in-out;
+}
+
+.title1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: opacity 2s ease-in-out;
+    animation: flickering 2s ease-in-out alternate;
+    position: fixed;
+    top: 35%;
+    left: 41.5%;
+    color: white;
+    font-size: 50px;
+    z-index: 9999;
+    opacity: 100%;
+}
+
+.title2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: opacity 2s ease-in-out;
+    animation: flickering 2s ease-in-out infinite alternate;
+    position: fixed;
+    top: 65%;
+    left: 37.5%;
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    z-index: 9999;
+    /* opacity: 0%; */
+}
+
+.title2:hover {
+    text-decoration: underline;
+    font-style: italic;
+    cursor: default;
+}
+
+.hide {
+    opacity: 0%;
+}
+
+.show {
+    opacity: 100%;
+}
+
+/* referenced https://gist.github.com/CodeMyUI/54ae3425579d7b7bc85a58a70f9e124b */
+@keyframes flickering {
+    0% {
+        opacity: 0.15;
+    }
+
+    5% {
+        opacity: 0.2;
+    }
+
+    10% {
+        opacity: 0.12;
+    }
+
+    15% {
+        opacity: 0.2;
+    }
+
+    25% {
+        opacity: 0.15;
+    }
+
+    30% {
+        opacity: 0.4;
+    }
+
+    100% {
+        opacity: 0.7;
+    }
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.peek_container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-right: 1px dashed rgb(112, 111, 111);
+    vertical-align: top;
+    display: inline-block;
+    width: 49%;
+    height: 93vh;
+}
+
+.peephole {
+    position: fixed;
+    top: 20%;
+    left: 10%;
+    width: 400px;
+    height: 400px;
+    border-radius: 500px;
+    box-shadow: 0 0 300px rgba(0, 0, 0, 0.851);
+    transition: all 2s ease-in-out;
+    animation: creation 1s ease-in-out;
+    overflow: hidden;
+    z-index: 20;
+}
+
+
+.book_container {
+    width: 49%;
+    height: 93vh;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.delacy {
+    margin-left: 6%;
+    margin-top: 20%;
+    animation: fading-in 4s ease-in-out;
+    opacity: 0%;
+}
+
+@keyframes fading-in {
+    50% {
+        transform: scale(1);
+        opacity: 100%
+    }
+
+    80% {
+        transform: scale(1.3);
+        opacity: 30%
+    }
+
+    100% {
+        transform: scale(1.3);
+        opacity: 0%
+    }
+}
+
+.book {
+    margin-top: 12%;
+    width: 100%;
+    height: 70%;
+    display: flex;
+}
+
+.single_page {
+    width: 50%;
+    height: 100%;
+    margin-left: 25%;
+    margin-top: 0px;
+    background: #f5f0e8;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transition: all 1s ease-in-out;
+}
+
+/* .para1 {
+    position: relative;
+    width: 90%;
+    line-height: 1.35;
+} */
+
+/* #para1_p {
+    position: relative;
+} */
+
+.letter {
+    display: inline-block;
+    position: relative;
+    transition: transform 2s ease, opacity 1s ease, filter 1s ease;
+}
+
+.word {
+    display: inline-block;
+    margin-right: 5px;
+    transition: transform 1s ease, color 1s ease, border-bottom .3s ease, background-color .3s ease, opacity 0.6s ease, filter 0.6s ease;
+}
+
+.subject {
+    border-bottom: 2px solid rgba(161, 22, 22, 0.697);
+}
+
+.verb {
+    background-color: rgba(255, 187, 0, 0.434);
+    /* border-bottom: 2px solid rgba(255, 187, 0, 0.69); */
+}
+
+.object {
+    border-bottom: 2px dashed rgba(27, 155, 27, 0.68);
+}
+
+.predicate {
+    border-bottom: 2px solid rgba(13, 143, 217, 0.68);
+}
+
+
+.emotion {
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.instruction {
+    position: absolute;
+    top: 645px;
+    left: 960px;
+    font-size: 13px;
+    opacity: 0.5;
+    display: inline-block;
+}
+
+@keyframes flyIn {
+    0% {
+        transform: translate(var(--startX), var(--startY));
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+
+.book_cover {
+    width: 95%;
+    height: 100%;
+    margin-left: -15px;
+    margin-top: -105px;
+    background: #f5f0e8;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transition: all 1s ease-in-out;
+}
+
+.book_cover:hover {
+    transform: scale(1.02);
+}
+
+.emotion {
+    display: inline-block;
+    font-style: italic;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.emotion:hover {
+    letter-spacing: 2px;
+}
+
+.guilt:hover {
+    color: #6b1d1d;
+    animation: shakeDiminish 0.5s ease-in-out alternate infinite;
+}
+
+.temptation:hover {
+    color: darkgreen;
+}
+
+.death:hover {
+    color: black;
+    text-shadow: 0 0 8px gray;
+}
+
+.sorrow:hover {
+    color: #3f5f8f;
+}
+
+.loss:hover {
+    opacity: 0.4;
+}
+
+.hope:hover {
+    color: goldenrod;
+    text-shadow: 0 0 8px gold;
+}
+
+.paradise:hover {
+    color: #8a6f2a;
+}
+
+.divine:hover {
+    color: #b8860b;
+    text-shadow: 0 0 10px white;
+}
+
+.creation:hover {
+    color: purple;
+    letter-spacing: 4px;
+}
+
+.prayer:hover {
+    color: #5d4b8c;
+}
+
+.ambition:hover {
+    transform: translateY(-6px);
+    display: inline-block;
+}
+
+@keyframes shakeDiminish {
+    0% {
+        transform: translateX(0px) scale(1);
+    }
+    25% {
+        transform: translateX(-5px) scale(0.95);
+    }
+    50% {
+        transform: translateX(5px) scale(0.9);
+    }
+    75% {
+        transform: translateX(-5px) scale(0.85);
+    }
+    100% {
+        transform: translateX(0px) scale(0.8);
+    }
+}
+
+.has-image {
+    position: relative;
+}
+
+.hover-image {
+    position: absolute;
+    bottom: 120%;   /* show above word */
+    left: 50%;
+    transform: translate(10%, 115%) scale(0.8);
+    
+    width: 150px;
+    opacity: 0;
+    pointer-events: none;
+
+    transition: 0.3s ease;
+}
+
+.has-image:hover .hover-image {
+    opacity: 1;
+    transform: translate(10%, 115%) scale(1);
+}
+
+
+.thought_stream {
+    position: fixed;
+    top: 18%;
+    left: 22%;
+    width: 330px;
+    height: 360px;
+    overflow: hidden;
+    z-index: 20;
+}
+
+.thought_scroll {
+    position: relative;
+    top: 12%;
+    left: 13%;
+    height: 1600px;
+    /* transition: transform 0.8s ease-in-out; */
+}
+
+.thought_day {
+    height: 360px;
+    padding-top: 25px;
+}
+
+.thought_bubble {
+    width: 230px;
+    margin-bottom: 12px;
+    padding: 10px 14px;
+    border-radius: 30px;
+    /* background: rgba(245, 240, 232, 0.9); */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+    font-family: Georgia, serif;
+    font-size: 14px;
+    line-height: 1.35;
+    opacity: 0;
+    transform: translateY(15px);
+    animation: bubbleIn 0.7s ease forwards;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.thought_bubble:nth-child(2) {
+    margin-left: 35px;
+    animation-delay: 0.25s;
+}
+
+.thought_bubble:nth-child(3) {
+    margin-left: 10px;
+    animation-delay: 0.5s;
+}
+
+@keyframes bubbleIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.peek_hint {
+    position: fixed;
+    left: 18%;
+    bottom: 130px;
+    color: rgb(90, 90, 90);
+    font-size: 13px;
+    opacity: 0.7;
+    animation: creation 10s ease-in-out;
+}
+
+.thought_note {
+    position: fixed;
+    width: 160px;
+    padding: 10px 14px;
+    background: rgba(86, 86, 86, 0.791);
+    color: white;
+    border-radius: 18px;
+    font-family: Georgia, serif;
+    font-size: 13px;
+    font-style: italic;
+    line-height: 1.35;
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.25);
+    z-index: 30;
+    opacity: 0;
+    animation: thoughtFloatIn 1s ease forwards;
+}
+
+@keyframes thoughtFloatIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+
+.bubble_avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 60%;
+    object-fit: cover;
+    opacity: 0.85;
+    flex-shrink: 0;
+    opacity: 0.55;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.thought_bubble:hover .bubble_avatar {
+    opacity: 1;
+    transform: scale(1.15);
+}
+
+
+.para{
+    perspective: 1000px;
+}
+
+.page_flip {
+    animation: pageFlip 0.8s ease forwards;
+    transform-origin: left center;
+}
+
+@keyframes pageFlip {
+    0% {
+        transform: rotateY(0deg);
+        opacity: 1;
+    }
+
+    50% {
+        transform: rotateY(-90deg);
+        opacity: 0.4;
+    }
+
+    100% {
+        transform: rotateY(0deg);
+        opacity: 1;
+    }
 }
