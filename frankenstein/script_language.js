@@ -14,8 +14,27 @@ let thoughtScroll = document.getElementById("thought_scroll");
 let currentThoughtDay = 0;
 let createdThoughtNotes = [];
 
+let splitIntroOverlay = document.getElementById("split_intro_overlay");
+let introLeftPanel = document.getElementById("intro_left_panel");
+let introRightPanel = document.getElementById("intro_right_panel");
+let totalThoughtCount = 0;
+let endingStarted = false;
+let TOTAL_REQUIRED = 11;
+
+setTimeout(function () {
+    splitIntroOverlay.classList.add("show_intro");
+}, 5000);
+
+introLeftPanel.addEventListener("click", function () {
+    introLeftPanel.classList.add("reveal_left");
+});
+
+introRightPanel.addEventListener("click", function () {
+    introRightPanel.classList.add("reveal_right");
+});
+
 let correctText =
-    "OF Mans First Disobedience, and the Fruit Of that Forbidden Tree, whose mortal tast Brought Death into the World, and all our woe, With loss of Eden, till one greater Man Restore us, and regain the blissful Seat, [ 5 ] Sing Heav'nly Muse, that on the secret top Of Oreb, or of Sinai, didst inspire That Shepherd, who first taught the chosen Seed, In the Beginning how the Heav'ns and Earth Rose out of Chaos: Or if Sion Hill [ 10 ] Delight thee more, and Siloa's Brook that flow'd Fast by the Oracle of God; I thence Invoke thy aid to my adventrous Song, That with no middle flight intends to soar Above th' Aonian Mount, while it pursues [ 15 ]";
+    "OF Mans First Disobedience, and the Fruit Of that Forbidden Tree, whose mortal tast Brought Death into the World, and all our woe, With the loss of Eden, till one greater Man Restore us, and regain the blissful Seat, [ 5 ] Sing Heav'nly Muse, that on the secret top Of Oreb, or of Sinai, didst inspire That Shepherd, who first taught the chosen Seed, In the Beginning how the Heav'ns and Earth Rose out of Chaos: Or if Sion Hill [ 10 ] Delight thee more, and Siloa's Brook that flow'd Fast by the Oracle of God; I thence Invoke thy aid to my adventrous Song, That with no middle flight intends to soar Above th' Aonian Mount, while it pursues [ 15 ]";
 
 let wordData = [
     { text: "OF", grammar: "" },
@@ -292,69 +311,13 @@ let brokenWords = [
     { wrong: "ursues", correct: "pursues" }
 ];
 
-let meaningHighlights = [
-    {
-        text: "First Disobedience",
-        type: "guilt"
-    },
-    {
-        text: "Forbidden Tree",
-        type: "temptation",
-        img: "images/forbidden_tree.jpeg"
-    },
-    {
-        text: "Brought Death into the World",
-        type: "death"
-    },
-    {
-        text: "all our woe",
-        type: "sorrow"
-    },
-    {
-        text: "loss of Eden",
-        type: "loss"
-    },
-    {
-        text: "one greater Man",
-        type: "hope",
-        img: "images/jesus.jpeg"
-    },
-    {
-        text: "Restore us",
-        type: "hope"
-    },
-    {
-        text: "regain the blissful Seat",
-        type: "paradise"
-    },
-    {
-        text: "Sing Heav'nly Muse",
-        type: "divine",
-        sound: "sounds/choir_short.mp3",
-        volume: 0.2,
-        delay: 150
-    },
-    {
-        text: "Rose out of Chaos",
-        type: "creation"
-    },
-    {
-        text: "Invoke thy aid",
-        type: "prayer"
-    },
-    {
-        text: "soar",
-        type: "ambition"
-    }
-];
-
 let notePositions = [
-    { left: "5%", top: "10%" },
-    { left: "30%", top: "12%" },
-    { left: "8%", top: "70%" },
+    { left: "5%", top: "5%" },
+    { left: "30%", top: "10%" },
+    { left: "8%", top: "83%" },
     { left: "28%", top: "75%" },
     { left: "2%", top: "65%" },
-    { left: "35%", top: "40%" }
+    { left: "35%", top: "50%" }
 ];
 
 let thoughtDays = [
@@ -408,6 +371,77 @@ let thoughtDays = [
     }
 ];
 
+let meaningHighlights = [
+    {
+        text: "First Disobedience",
+        type: "guilt",
+    },
+    {
+        text: "Forbidden Tree",
+        type: "temptation",
+        img: "images/forbidden_tree.jpeg",
+        thought: "A thing can be beautiful and dangerous at the same time.",
+        left: "55%",
+        top: "6%"
+    },
+    {
+        text: "Brought Death into the World",
+        type: "death",
+        thought: "This word sounds firghtening to me.",
+        left: "84%",
+        top: "10%"
+    },
+    {
+        text: "all our woe",
+        type: "sorrow",
+    },
+    {
+        text: "loss of Eden",
+        type: "loss",
+        thought: "Loss means being removed from where one belonged.",
+        left: "59%",
+        top: "63%"
+    },
+    {
+        text: "one greater Man",
+        type: "hope",
+        img: "images/jesus.jpeg",
+        thought: "They believe someone can repair what was broken.",
+        left: "74%",
+        top: "52%"
+    },
+    {
+        text: "Restore us",
+        type: "hope"
+    },
+    {
+        text: "regain the blissful Seat",
+        type: "paradise"
+    },
+    {
+        text: "Sing Heav'nly Muse",
+        type: "divine",
+        sound: "sounds/choir_short.mp3",
+        volume: 0.2,
+        delay: 150
+    },
+    {
+        text: "Rose out of Chaos",
+        type: "creation",
+        thought: "I know this feeling: to come out of darkness without understanding why.",
+        left: "78%",
+        top: "60%"
+    },
+    {
+        text: "Invoke thy aid",
+        type: "prayer"
+    },
+    {
+        text: "soar",
+        type: "ambition"
+    }
+];
+
 function initThoughts(thoughtScroll, peephole) {
 
     let sectionHeight = 360;  
@@ -439,7 +473,7 @@ function initThoughts(thoughtScroll, peephole) {
     let scrollProgress = 0;  
     let sensitivity = 0.0001; 
 
-    let maxTranslate = sectionHeight * (thoughtDays.length - 1) + 200;
+    let maxTranslate = sectionHeight * (thoughtDays.length - 0.5) + 200;
 
     peephole.addEventListener("wheel", function(e) {
         e.preventDefault();
@@ -484,6 +518,9 @@ function createOutsideNote(text) {
     note.style.top = pos.top;
     noteIndex++;
     left_screen.append(note);
+
+    totalThoughtCount++;
+    checkEnding();
 }
 
 function clearPage() {
@@ -667,19 +704,84 @@ function stageMeaning() {
             audio.currentTime = 0;
         });
     });
+
+    meaningHighlights.forEach(function(item, index) {
+        if (!item.thought) return;
+
+        let span = para1_p.querySelector(`[data-index="${index}"]`);
+        if (!span) return;
+
+        span.addEventListener("mouseenter", function () {
+            showMeaningThought(item);
+        });
+    });
 }
 
-function flipToStage(nextStageFunction) {
-    single_page.classList.add("page_flip");
-    instruction.classList.add("page_flip");
+function showMeaningThought(item) {
+    let existing = document.querySelector(`[data-thought="${item.text}"]`);
+    if (existing) return;
+
+    let note = document.createElement("p");
+    note.className = "meaning_thought_note";
+    note.dataset.thought = item.text;
+    note.innerText = item.thought;
+    note.style.left = item.left;
+    note.style.top = item.top;
+    document.body.append(note);
+    
+    totalThoughtCount++;
+    checkEnding();
+}
+
+function startLanguageEnding() {
+    let allNotes = document.querySelectorAll(".thought_note, .meaning_thought_note");
+
+    allNotes.forEach(function (note) {
+        note.classList.add("note_scale");
+    });
+
+    setTimeout(function () {
+        let ending = document.createElement("div");
+        ending.className = "language_ending";
+        ending.innerHTML = `
+            <p>I think I am ready.</p>
+            <p>I want to join human life.</p>
+            <p>I will be accepted.</p>
+            <p class="right_question">Right?</p>
+        `;
+        document.body.append(ending);
+        setTimeout(function () {
+            document.querySelector(".right_question").classList.add("show_right");
+            setTimeout(function () {
+                let newimage = document.createElement("img");
+                newimage.src = "images/frankenstein_cover.jpg";
+                newimage.className = "theme_image";
+                ending.append(newimage);
+                newimage.addEventListener("click", function(){
+                    window.location.href = "index.html"; 
+                })
+            }, 3000);
+        }, 3000);
+    }, 1800);
+}
+
+function flipToStage(nextStageFunction, direction) {
+    if (direction === "backward") {
+        single_page.classList.add("page_flip_back");
+        instruction.classList.add("page_flip_back");
+    } else {
+        single_page.classList.add("page_flip_forward");
+        instruction.classList.add("page_flip_forward");
+    }
 
     setTimeout(function () {
         nextStageFunction();
     }, 400);
-
     setTimeout(function () {
-        single_page.classList.remove("page_flip");
-        instruction.classList.remove("page_flip");
+        single_page.classList.remove("page_flip_forward");
+        single_page.classList.remove("page_flip_back");
+        instruction.classList.remove("page_flip_forward");
+        instruction.classList.remove("page_flip_back");
     }, 800);
 }
 
@@ -695,21 +797,40 @@ function updateStage() {
             flipToStage(stageGrammar);
         } else if (stage == 3)  {
             flipToStage(stageMeaning);
-        } else if (stage === 4) {
-            flipToStage(stageQuestion);
         }
     }, 400);
 }
 
-page.addEventListener("click", function () {
-    stage++;
-
-    if (stage > 4) {
-        stage = 4;
+page.addEventListener("click", function (e) {
+    let rect = page.getBoundingClientRect();
+    let clickX = e.clientX - rect.left;
+    let middle = rect.width / 2;
+    if (clickX < middle) {
+        goBackward();
+    } else {
+        goForward();
     }
-
-    updateStage();
 });
+
+function goForward() {
+    if (stage >= 3) return;
+    stage++;
+    flipToStage(getStageFunction(stage), "forward");
+}
+
+function goBackward() {
+    if (stage <= -1) return;
+    stage--;
+    flipToStage(getStageFunction(stage), "backward");
+}
+
+function getStageFunction(stageNumber) {
+    if (stageNumber === -1) return stageCover;
+    if (stageNumber === 0) return stageLetters;
+    if (stageNumber === 1) return stageWords;
+    if (stageNumber === 2) return stageGrammar;
+    if (stageNumber === 3) return stageMeaning;
+}
 
 setTimeout(function () {
     let peephole = document.createElement("div");
@@ -726,3 +847,14 @@ setTimeout(function () {
 
 
 stageCover();
+
+
+function checkEnding() {
+    console.log(totalThoughtCount);
+    if (totalThoughtCount >= TOTAL_REQUIRED && !endingStarted) {
+        endingStarted = true;
+        setTimeout(function () {
+            startLanguageEnding();
+        }, 1200);
+    }
+}
