@@ -467,7 +467,7 @@ body {
 .title1 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     transition: opacity 2s ease-in-out;
-    animation: flickering 2s ease-in-out alternate;
+    animation: flickering 4s ease-in-out alternate;
     position: fixed;
     top: 35%;
     left: 41.5%;

@@ -2,10 +2,10 @@ let page = document.getElementById("page");
 let left_screen = document.querySelector(".peek_container");
 let para1_p = document.querySelector("#para_p");
 let stage_title = document.querySelector("#stage_title");
-let para_section = document.querySelector(".para")
-let book = document.querySelector(".book")
-let single_page = document.querySelector(".single_page")
-let instruction = document.querySelector(".instruction")
+let para_section = document.querySelector(".para");
+let book = document.querySelector(".book");
+let single_page = document.querySelector(".single_page");
+let instruction = document.querySelector(".instruction");
 
 let stage = -1;
 let noteIndex = 0;
@@ -757,10 +757,14 @@ function startLanguageEnding() {
                 newimage.src = "images/frankenstein_cover.jpg";
                 newimage.className = "theme_image";
                 ending.append(newimage);
+                let title = document.createElement("p");
+                title.innerText = "Awakening"
+                title.className = "title1";
+                ending.append(title);
                 newimage.addEventListener("click", function(){
                     window.location.href = "index.html"; 
                 })
-            }, 3000);
+            }, 4000);
         }, 3000);
     }, 1800);
 }
