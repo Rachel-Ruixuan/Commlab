@@ -423,7 +423,7 @@ body {
 .fire {
     position: absolute;
     margin-left: 1000px;
-    margin-top: 400px;
+    margin-top: 25%;
     transform: scale(0.5);
     /* margin-left: 30%; */
     /* margin-top: 8000px; */
@@ -669,8 +669,8 @@ a {
 
 .instruction {
     position: absolute;
-    top: 645px;
-    left: 960px;
+    top: 78%;
+    left: 63%;
     font-size: 13px;
     opacity: 0.5;
     display: inline-block;
@@ -868,7 +868,7 @@ a {
 .peek_hint {
     position: fixed;
     left: 18%;
-    bottom: 130px;
+    bottom: 20%;
     color: rgb(90, 90, 90);
     font-size: 13px;
     opacity: 0.7;
